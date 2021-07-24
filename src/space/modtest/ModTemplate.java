@@ -7,6 +7,7 @@ public class ModTemplate extends Mod{
 
     public ModTemplate() {
         Log.info("I need help otherwise?");
+        //I need help D:
     }
 
     @Override
