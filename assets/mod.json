@@ -3,7 +3,7 @@
   "displayName": "YeaTest",
   "author": "[#8738ff[]]spacecr4zygamer[[]]",
   "description": "some, Gradle jar Mindustry mod template, thanks sonnicus",
-  "version": "0.05",
+  "version": "0.06",
   "main": "space.modtest.Main",
   "minGameVersion": "126.1",
   "dependencies": [],

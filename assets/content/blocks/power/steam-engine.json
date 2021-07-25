@@ -1,7 +1,0 @@
-{
-  "name": "Steam Engine",
-  "type": "SingleLiquidGenerator",
-  "health": 100,
-  "buildVisibility": "shown",
-  "category": "power"
-}
