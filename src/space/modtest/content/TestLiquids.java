@@ -9,7 +9,7 @@ public class TestLiquids implements ContentList {
 
     @Override
     public void load() {
-        steam = new Liquid("Steam"){{
+        steam = new Liquid("steam"){{
            flammability = 0;
            explosiveness = 0.2f;
            viscosity = 0.01f;
