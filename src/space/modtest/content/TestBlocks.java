@@ -37,6 +37,7 @@ public class TestBlocks implements ContentList {
             hasPower = true;
             size = 3;
             powerProduction = 10;
+            liquidCapacity = 180;
         }};
         boiler = new GenericCrafter("boiler"){{
             health = 100;
@@ -44,9 +45,10 @@ public class TestBlocks implements ContentList {
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
             outputsLiquid = true;
-            outputLiquid.liquid = TestLiquids.steam;
-            outputLiquid.amount = 10;
+            outputLiquid.liquid = Liquids.water;
+            outputLiquid.amount = 1;
             size = 2;
+            liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
             craftTime = 60;
