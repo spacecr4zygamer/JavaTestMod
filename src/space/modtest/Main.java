@@ -6,6 +6,7 @@ import mindustry.Vars;
 import mindustry.ctype.ContentList;
 import mindustry.mod.Mod;
 import space.modtest.content.TestBlocks;
+import space.modtest.content.TestItems;
 import space.modtest.content.TestLiquids;
 import space.modtest.world.blocks.power.SingleLiquidGenerator;
 
@@ -15,6 +16,7 @@ public class Main extends Mod{
 
     public static final Seq<ContentList> contentLists = Seq.with(
             new TestLiquids(),
+            new TestItems(),
             new TestBlocks()
     );
 

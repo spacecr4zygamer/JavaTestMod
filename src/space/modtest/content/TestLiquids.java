@@ -5,7 +5,7 @@ import mindustry.ctype.ContentList;
 import mindustry.type.Liquid;
 
 public class TestLiquids implements ContentList {
-    public static Liquid steam,Mud;
+    public static Liquid steam,mud;
 
     @Override
     public void load() {
@@ -18,7 +18,7 @@ public class TestLiquids implements ContentList {
            lightColor = Color.valueOf("e6e6e6");
         }};
 
-        Mud = new Liquid("Mud"){{
+        mud = new Liquid("Mud"){{
             localizedName = "Mud";
             flammability = 0;
             explosiveness = 0.2f;

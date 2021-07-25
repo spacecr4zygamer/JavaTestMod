@@ -11,6 +11,7 @@ import mindustry.type.ItemStack;
 import mindustry.type.Liquid;
 import mindustry.type.LiquidStack;
 import mindustry.world.Block;
+import mindustry.world.blocks.environment.OreBlock;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.consumers.Consumers;
 import mindustry.world.meta.BlockGroup;
@@ -25,7 +26,7 @@ import static mindustry.type.ItemStack.with;
 public class TestBlocks implements ContentList {
 
     // power
-    public static Block steamengine, boiler;
+    public static Block steamengine, boiler, safite;
 
     @Override
     public void load() {
@@ -60,6 +61,16 @@ public class TestBlocks implements ContentList {
             consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
             craftTime = 30;
+        }};
+
+        safite = new OreBlock("safite"){{
+            localizedName = "Safite";
+            oreDefault = true;
+            oreThreshold = 0.78f;
+            oreScale = 20;
+            playerUnmineable = false;
+            itemDrop = TestItems.safiteore;
+            variants = 3;
         }};
     }
 }
