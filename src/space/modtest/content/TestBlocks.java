@@ -28,8 +28,7 @@ public class TestBlocks implements ContentList {
 
     @Override
     public void load() {
-        steamengine = new SteamEngineGenerator("steam-engine"){
-            {
+        steamengine = new SteamEngineGenerator("steam-engine"){{
                 minLiquidEfficiency = 0f;
                 maxLiquidGenerate = 1f;
                 health = 150;

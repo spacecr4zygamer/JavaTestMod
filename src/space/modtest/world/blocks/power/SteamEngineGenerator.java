@@ -12,7 +12,7 @@ import space.modtest.content.TestLiquids;
 
 public class SteamEngineGenerator extends SingleLiquidGenerator{
 
-    public TextureRegion topRegion = Core.atlas.find(name+"-top");
+    public TextureRegion topRegion = Core.atlas.find("steam-engine-top");
     public TextureRegion liquidRegion = Core.atlas.find(name+"-liquid");
 
     private float timeDrilled = 0;
