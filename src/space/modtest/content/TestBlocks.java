@@ -38,7 +38,7 @@ public class TestBlocks implements ContentList {
                 requirements(Category.power,with(Items.lead,15,Items.silicon,10));
                 buildVisibility = BuildVisibility.shown;
                 group = BlockGroup.power;
-                consumes.liquid(TestLiquids.steam,0.5f);
+                consumes.liquid(TestLiquids.steam,0.25f);
                 outputsPower = true;
                 consumesPower = false;
                 hasPower = true;
@@ -60,7 +60,7 @@ public class TestBlocks implements ContentList {
             liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
-            craftTime = 60;
+            craftTime = 30;
         }};
     }
 }

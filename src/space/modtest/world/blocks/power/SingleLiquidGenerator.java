@@ -18,7 +18,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
         hasItems = false;
         hasLiquids = true;
     }
-    
+
     @Override
     protected float getItemEfficiency(Item item){
         return 0f;
@@ -46,6 +46,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
                 productionEfficiency = 0.0f;
                 return;
             }
+            
 
             Liquid liquid = null;
             for(Liquid other : content.liquids()){
