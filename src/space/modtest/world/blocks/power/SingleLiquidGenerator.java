@@ -13,7 +13,7 @@ import static mindustry.Vars.*;
 public class SingleLiquidGenerator extends ItemLiquidGenerator {
 
     public SingleLiquidGenerator(String name) {
-        super(false,true,name);
+        super(false, true, name);
         defaults = true;
         hasItems = false;
         hasLiquids = true;

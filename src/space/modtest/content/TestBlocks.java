@@ -4,12 +4,14 @@ import arc.graphics.g2d.TextureRegion;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
+import mindustry.content.TechTree;
 import mindustry.ctype.ContentList;
 import mindustry.entities.Effect;
 import mindustry.type.*;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.OreBlock;
 import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.consumers.ConsumePower;
 import mindustry.world.consumers.Consumers;
 import mindustry.world.meta.BlockGroup;
 import mindustry.world.meta.BuildVisibility;
@@ -22,7 +24,7 @@ import static mindustry.type.ItemStack.with;
 public class TestBlocks implements ContentList {
 
     // power
-    public static Block steamengine, boiler, safite, burnerfurnace;
+    public static Block steamengine, boiler, safite, burnerfurnace, crusher, washingplant, blastfurnace;
 
     @Override
     public void load() {
@@ -56,6 +58,70 @@ public class TestBlocks implements ContentList {
             liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
+            craftTime = 30;
+        }};
+
+        crusher = new GenericCrafter("crusher"){{
+            localizedName = "Crusher";
+            health = 100;
+            outputsPower = false;
+            consumesPower = false;
+            hasPower = false;
+            requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
+            buildVisibility = BuildVisibility.shown;
+            group = BlockGroup.none;
+            alwaysUnlocked = true;
+            outputsLiquid = false;
+            ItemStack crushedsafite = new ItemStack(TestItems.crushedsafite, 1);
+            outputItem = crushedsafite;
+            craftEffect = Fx.cloudsmoke;
+            size = 3;
+            liquidCapacity = 0;
+            consumes.items(with(Items.coal, 1, TestItems.safiteore, 2));
+            craftTime = 30;
+        }};
+
+        washingplant = new GenericCrafter("washing-plant"){{
+            localizedName = "Washing Plant";
+            health = 100;
+            outputsPower = false;
+            consumesPower = true;
+            hasPower = true;
+            requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
+            buildVisibility = BuildVisibility.shown;
+            group = BlockGroup.none;
+            alwaysUnlocked = false;
+            outputsLiquid = false;
+            ItemStack washedsafite = new ItemStack(TestItems.washedsafite, 1);
+            outputItem = washedsafite;
+            craftEffect = Fx.cloudsmoke;
+            size = 3;
+            liquidCapacity = 100;
+            consumes.liquid(Liquids.water,0.5f);
+            consumes.power(0.5f);
+            consumes.item(TestItems.crushedsafite, 2);
+            craftTime = 30;
+        }};
+
+        blastfurnace = new GenericCrafter("blast-furnace"){{
+            localizedName = "Blast Furnace";
+            health = 100;
+            outputsPower = false;
+            consumesPower = true;
+            hasPower = true;
+            requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
+            buildVisibility = BuildVisibility.shown;
+            group = BlockGroup.none;
+            alwaysUnlocked = false;
+            outputsLiquid = false;
+            ItemStack blastedsafite = new ItemStack(TestItems.blastedsafite, 1);
+            outputItem = blastedsafite;
+            craftEffect = Fx.cloudsmoke;
+            size = 4;
+            liquidCapacity = 100;
+            consumes.liquid(TestLiquids.sulfuricacid,0.5f);
+            consumes.power(0.5f);
+            consumes.item(TestItems.washedsafite, 2);
             craftTime = 30;
         }};
 
