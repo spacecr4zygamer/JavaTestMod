@@ -1,5 +1,6 @@
 package space.modtest.world.blocks.power;
 
+import arc.Core;
 import arc.graphics.Texture;
 import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.TextureRegion;
@@ -11,8 +12,8 @@ import space.modtest.content.TestLiquids;
 
 public class SteamEngineGenerator extends SingleLiquidGenerator{
 
-    public @Load("@-top") TextureRegion topRegion;
-    public @Load("@-liquid") TextureRegion liquidRegion;
+    public TextureRegion topRegion = Core.atlas.find(name+"-top");
+    public TextureRegion liquidRegion = Core.atlas.find(name+"-liquid");
 
     private float timeDrilled = 0;
     private float rotateSpeed = 0;
