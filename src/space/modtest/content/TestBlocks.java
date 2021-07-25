@@ -6,10 +6,7 @@ import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.ctype.ContentList;
 import mindustry.entities.Effect;
-import mindustry.type.Category;
-import mindustry.type.ItemStack;
-import mindustry.type.Liquid;
-import mindustry.type.LiquidStack;
+import mindustry.type.*;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.OreBlock;
 import mindustry.world.blocks.production.GenericCrafter;
@@ -26,7 +23,7 @@ import static mindustry.type.ItemStack.with;
 public class TestBlocks implements ContentList {
 
     // power
-    public static Block steamengine, boiler, safite;
+    public static Block steamengine, boiler, safite, burnerfurnace;
 
     @Override
     public void load() {
@@ -61,6 +58,25 @@ public class TestBlocks implements ContentList {
             consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
             craftTime = 30;
+        }};
+
+        burnerfurnace = new SingleLiquidGenerator("burner-furnace"){{
+            localizedName = "Burner Furnace";
+            minLiquidEfficiency = 0f;
+            maxLiquidGenerate = 0f;
+            health = 50;
+            requirements(Category.power,with(Items.lead,15,Items.silicon,10));
+            buildVisibility = BuildVisibility.shown;
+            alwaysUnlocked = true;
+            group = BlockGroup.power;
+            consumes.item(Items.coal, 2);
+            outputsPower = true;
+            consumesPower = false;
+            hasPower = true;
+            size = 3;
+            powerProduction = 10;
+            liquidCapacity = 0;
+            randomlyExplode = false;
         }};
 
         safite = new OreBlock("safite"){{

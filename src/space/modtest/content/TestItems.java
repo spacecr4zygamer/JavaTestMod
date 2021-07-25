@@ -11,12 +11,12 @@ public class TestItems implements ContentList {
 
     @Override
     public void load() {
-    safiteore = new Item("safite-ore"){{
-        localizedName = "Safite Ore";
-        description = "Ore that can be crushed";
-        color = Color.valueOf("bfbfbf");
-        alwaysUnlocked = true;
-    }};
+        safiteore = new Item("safite-ore"){{
+            localizedName = "Safite Ore";
+            description = "Ore that can be crushed";
+            color = Color.valueOf("bfbfbf");
+            alwaysUnlocked = true;
+        }};
 
     }
 }
