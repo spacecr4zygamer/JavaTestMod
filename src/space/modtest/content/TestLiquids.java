@@ -19,7 +19,7 @@ public class TestLiquids implements ContentList {
         }};
 
         compackedsteam = new Liquid("compacked-steam"){{
-            localizedName = "Compacked Steam";
+            localizedName = "Compress Steam";
             flammability = 0;
             explosiveness = 0.2f;
             viscosity = 0.01f;

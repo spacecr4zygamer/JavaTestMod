@@ -15,7 +15,6 @@ import mindustry.world.meta.BlockGroup;
 import mindustry.world.meta.BuildVisibility;
 import space.modtest.world.blocks.power.SingleLiquidGenerator;
 
-import java.security.acl.Group;
 import java.util.function.Consumer;
 
 import static mindustry.type.ItemStack.with;
