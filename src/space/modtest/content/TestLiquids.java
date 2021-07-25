@@ -19,6 +19,7 @@ public class TestLiquids implements ContentList {
         }};
 
         Mud = new Liquid("Mud"){{
+            localizedName = "Mud";
             flammability = 0;
             explosiveness = 0.2f;
             viscosity = 0.01f;
