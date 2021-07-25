@@ -44,8 +44,10 @@ public class TestBlocks implements ContentList {
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
             outputsLiquid = true;
+            outputLiquid.liquid = TestLiquids.steam;
+            outputLiquid.amount = 10;
             size = 2;
-            consumes.liquid(Liquids.water,10);
+            consumes.liquid(Liquids.water,0.5f);
             consumes.item(Items.coal,1);
             craftTime = 60;
         }};
