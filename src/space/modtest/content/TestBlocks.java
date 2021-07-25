@@ -24,7 +24,7 @@ public class TestBlocks implements ContentList {
 
     @Override
     public void load() {
-        steamengine = new SingleLiquidGenerator("Steam Engine"){{
+        steamengine = new SingleLiquidGenerator("steam-engine"){{
             health = 150;
             requirements(Category.power,with(Items.lead,15,Items.silicon,10));
             buildVisibility = BuildVisibility.shown;
@@ -33,7 +33,7 @@ public class TestBlocks implements ContentList {
             outputsPower = true;
             consumesPower = false;
             hasPower = true;
-            size = 2;
+            size = 3;
             powerProduction = 10;
 
         }};
