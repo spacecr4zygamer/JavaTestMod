@@ -4,7 +4,7 @@
   "author": "[#8738ff[]]spacecr4zygamer[[]]",
   "description": "some, Gradle jar Mindustry mod template, thanks sonnicus",
   "version": "0",
-  "main": "space.modtest.ModTemplate",
+  "main": "space.modtest.Main",
   "minGameVersion": "105",
   "dependencies": [],
   "hidden": false,
