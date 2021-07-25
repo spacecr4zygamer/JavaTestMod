@@ -18,16 +18,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
         hasItems = false;
         hasLiquids = true;
     }
-
-    @Override
-    public void setStats() {
-        super.setStats();
-
-        if (hasLiquids){
-            stats.add(Stat.productionTime,powerProduction*60.0f, StatUnit.seconds);
-        }
-    }
-
+    
     @Override
     protected float getItemEfficiency(Item item){
         return 0f;
