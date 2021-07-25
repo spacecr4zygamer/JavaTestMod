@@ -9,8 +9,10 @@ import mindustry.world.blocks.power.ItemLiquidGenerator;
 public class SingleLiquidGenerator extends ItemLiquidGenerator {
 
     public SingleLiquidGenerator(String name) {
-        super(name);
+        super(false,true,name);
         defaults = true;
+        hasItems = false;
+        hasLiquids = true;
     }
 
     @Override
@@ -21,6 +23,10 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
     @Override
     protected float getLiquidEfficiency(Liquid liquid){
         return 1f;
+    }
+
+    public class SingleLiquidGeneratorBuild extends ItemLiquidGeneratorBuild {
+        
     }
 
     //TODO - Add spinning top icon

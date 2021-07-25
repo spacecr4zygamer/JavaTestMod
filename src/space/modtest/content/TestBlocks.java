@@ -32,17 +32,19 @@ public class TestBlocks implements ContentList {
         steamengine = new SingleLiquidGenerator("steam-engine"){
 
             {
-            health = 150;
-            requirements(Category.power,with(Items.lead,15,Items.silicon,10));
-            buildVisibility = BuildVisibility.shown;
-            group = BlockGroup.power;
-            consumes.liquid(TestLiquids.steam,1);
-            outputsPower = true;
-            consumesPower = false;
-            hasPower = true;
-            size = 3;
-            powerProduction = 10;
-            liquidCapacity = 180;
+                minLiquidEfficiency = 0f;
+                maxLiquidGenerate = 1f;
+                health = 150;
+                requirements(Category.power,with(Items.lead,15,Items.silicon,10));
+                buildVisibility = BuildVisibility.shown;
+                group = BlockGroup.power;
+                consumes.liquid(TestLiquids.steam,1);
+                outputsPower = true;
+                consumesPower = false;
+                hasPower = true;
+                size = 3;
+                powerProduction = 10;
+                liquidCapacity = 180;
         }};
         boiler = new GenericCrafter("boiler"){{
             health = 100;
