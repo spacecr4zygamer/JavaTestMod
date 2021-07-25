@@ -28,7 +28,7 @@ public class TestBlocks implements ContentList {
     @Override
     public void load() {
         steamengine = new SingleLiquidGenerator("steam-engine"){
-            
+
             {
             health = 150;
             requirements(Category.power,with(Items.lead,15,Items.silicon,10));

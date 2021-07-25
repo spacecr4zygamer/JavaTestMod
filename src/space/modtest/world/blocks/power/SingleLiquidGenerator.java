@@ -23,12 +23,5 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
         return 1f;
     }
 
-    public class SingleLiquidGeneratorBuild extends ItemLiquidGeneratorBuild {
-        @Override
-        public void draw() {
-
-        }
-    }
-
     //TODO - Add spinning top icon
 }
