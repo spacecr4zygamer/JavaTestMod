@@ -38,7 +38,7 @@ public class TestBlocks implements ContentList {
                 requirements(Category.power,with(Items.lead,15,Items.silicon,10));
                 buildVisibility = BuildVisibility.shown;
                 group = BlockGroup.power;
-                consumes.liquid(TestLiquids.steam,1);
+                consumes.liquid(TestLiquids.steam,0.5f);
                 outputsPower = true;
                 consumesPower = false;
                 hasPower = true;
@@ -52,7 +52,7 @@ public class TestBlocks implements ContentList {
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
             outputsLiquid = true;
-            LiquidStack steam = new LiquidStack(TestLiquids.steam,1);
+            LiquidStack steam = new LiquidStack(TestLiquids.steam,90);
             outputLiquid = steam;
             craftEffect = Fx.cloudsmoke;
             size = 2;

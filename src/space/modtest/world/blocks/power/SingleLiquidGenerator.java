@@ -5,6 +5,8 @@ import arc.util.Nullable;
 import mindustry.type.Item;
 import mindustry.type.Liquid;
 import mindustry.world.blocks.power.ItemLiquidGenerator;
+import mindustry.world.meta.Stat;
+import mindustry.world.meta.StatUnit;
 
 public class SingleLiquidGenerator extends ItemLiquidGenerator {
 
@@ -13,6 +15,15 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
         defaults = true;
         hasItems = false;
         hasLiquids = true;
+    }
+
+    @Override
+    public void setStats() {
+        super.setStats();
+
+        if (hasLiquids){
+            stats.add(Stat.productionTime,powerProduction*60.0f, StatUnit.seconds);
+        }
     }
 
     @Override
@@ -26,7 +37,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
     }
 
     public class SingleLiquidGeneratorBuild extends ItemLiquidGeneratorBuild {
-        
+
     }
 
     //TODO - Add spinning top icon
