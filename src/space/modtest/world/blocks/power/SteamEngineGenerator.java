@@ -38,7 +38,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
 
 
             if(hasLiquids){
-                Drawf.liquid(liquidRegion, x, y, liquids.total() / liquidCapacity, liquids.current().color);
+                //Drawf.liquid(liquidRegion, x, y, liquids.total() / liquidCapacity, liquids.current().color);
                 Draw.rect(topRegion, x, y, timeDrilled * rotateSpeed);
             }
         }
