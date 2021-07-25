@@ -6,6 +6,7 @@ import mindustry.ctype.ContentList;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.Liquid;
+import mindustry.type.LiquidStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.consumers.Consumers;
@@ -39,6 +40,16 @@ public class TestBlocks implements ContentList {
         }};
         boiler = new GenericCrafter("boiler"){{
             health = 100;
+            requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
+            buildVisibility = BuildVisibility.shown;
+            group = BlockGroup.none;
+            outputsLiquid = true;
+            outputLiquid.liquid = TestLiquids.steam;
+            outputLiquid.amount = 60;
+            size = 2;
+            consumes.liquid(Liquids.water,10);
+            consumes.item(Items.coal,1);
+            craftTime = 60;
         }};
     }
 }
