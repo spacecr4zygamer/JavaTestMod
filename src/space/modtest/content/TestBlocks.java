@@ -1,9 +1,11 @@
 package space.modtest.content;
 
 import arc.graphics.g2d.TextureRegion;
+import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.ctype.ContentList;
+import mindustry.entities.Effect;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.Liquid;
@@ -50,6 +52,7 @@ public class TestBlocks implements ContentList {
             outputsLiquid = true;
             LiquidStack steam = new LiquidStack(TestLiquids.steam,1);
             outputLiquid = steam;
+            craftEffect = Fx.cloudsmoke;
             size = 2;
             liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
