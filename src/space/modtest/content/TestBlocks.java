@@ -30,7 +30,6 @@ public class TestBlocks implements ContentList {
     @Override
     public void load() {
         steamengine = new SingleLiquidGenerator("steam-engine"){
-
             {
                 minLiquidEfficiency = 0f;
                 maxLiquidGenerate = 1f;
