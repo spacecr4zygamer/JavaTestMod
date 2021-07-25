@@ -14,6 +14,7 @@ import mindustry.world.consumers.Consumers;
 import mindustry.world.meta.BlockGroup;
 import mindustry.world.meta.BuildVisibility;
 import space.modtest.world.blocks.power.SingleLiquidGenerator;
+import space.modtest.world.blocks.power.SteamEngineGenerator;
 
 import java.security.acl.Group;
 import java.util.function.Consumer;
@@ -27,7 +28,7 @@ public class TestBlocks implements ContentList {
 
     @Override
     public void load() {
-        steamengine = new SingleLiquidGenerator("steam-engine"){
+        steamengine = new SteamEngineGenerator("steam-engine"){
             {
                 minLiquidEfficiency = 0f;
                 maxLiquidGenerate = 1f;
