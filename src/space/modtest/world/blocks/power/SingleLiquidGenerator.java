@@ -73,7 +73,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
                 liquids.remove(liquid, used * power.graph.getUsageFraction());
                 productionEfficiency = baseLiquidEfficiency * used / maximumPossible;
                 if (liquids.get(liquid)>=0f) {
-                    generateTime += 1f;
+                    generateTime = 1f;
                 }
 
                 if(used > 0.001f && Mathf.chance(0.05 * delta())){
