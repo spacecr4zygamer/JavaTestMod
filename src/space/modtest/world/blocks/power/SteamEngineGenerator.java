@@ -27,7 +27,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
     @Override
     public void load() {
         super.load();
-        topRegion = atlas.find("steam-engine-top.png");
+        topRegion = atlas.find("steam-engine-top","png");
     }
 
     public class SteamEngineGeneratorBuild extends SingleLiquidGeneratorBuild {
