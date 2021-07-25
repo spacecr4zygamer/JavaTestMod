@@ -7,6 +7,7 @@ import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.Liquid;
 import mindustry.world.Block;
+import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.consumers.Consumers;
 import mindustry.world.meta.BlockGroup;
 import mindustry.world.meta.BuildVisibility;
@@ -20,7 +21,7 @@ import static mindustry.type.ItemStack.with;
 public class TestBlocks implements ContentList {
 
     // power
-    public static Block steamengine;
+    public static Block steamengine, boiler;
 
     @Override
     public void load() {
@@ -35,7 +36,9 @@ public class TestBlocks implements ContentList {
             hasPower = true;
             size = 3;
             powerProduction = 10;
-
+        }};
+        boiler = new GenericCrafter("boiler"){{
+            health = 100;
         }};
     }
 }
