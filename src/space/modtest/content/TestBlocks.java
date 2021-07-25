@@ -45,8 +45,8 @@ public class TestBlocks implements ContentList {
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
             outputsLiquid = true;
-            outputLiquid.liquid = Liquids.water;
-            outputLiquid.amount = 1;
+            LiquidStack steam = new LiquidStack(TestLiquids.steam,1);
+            outputLiquid = steam;
             size = 2;
             liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
