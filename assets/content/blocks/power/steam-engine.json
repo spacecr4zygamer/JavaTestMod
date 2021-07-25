@@ -1,4 +1,5 @@
 {
   "name": "Steam Engine",
-  "type": "SingleLiquidGenerator"
+  "type": "SingleLiquidGenerator",
+  "health": 100
 }
