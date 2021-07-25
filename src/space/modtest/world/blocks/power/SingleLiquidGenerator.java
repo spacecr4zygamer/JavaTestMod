@@ -47,6 +47,8 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
             float calculationDelta = delta();
             boolean cons = consValid();
 
+            generateTime = 0.1f;
+
             heat = Mathf.lerpDelta(heat, generateTime >= 0.001f && enabled && cons ? 1f : 0f, 0.05f);
 
             if(!cons){
@@ -73,7 +75,7 @@ public class SingleLiquidGenerator extends ItemLiquidGenerator {
                 liquids.remove(liquid, used * power.graph.getUsageFraction());
                 productionEfficiency = baseLiquidEfficiency * used / maximumPossible;
                 if (liquids.get(liquid)>=0f) {
-                    generateTime = 1f;
+                    //generateTime = 1f;
                 }
 
                 if(used > 0.001f && Mathf.chance(0.05 * delta())){
