@@ -1,4 +1,4 @@
-package space.modtest;
+package space.modtest.world.blocks.power;
 
 import mindustry.type.Item;
 import mindustry.type.Liquid;
