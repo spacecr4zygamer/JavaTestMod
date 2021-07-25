@@ -18,7 +18,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
     public TextureRegion liquidRegion = Core.atlas.find(name+"-liquid");
 
     private float timeDrilled = 0;
-    private float rotateSpeed = 0;
+    private float rotateSpeed = 1;
 
     public SteamEngineGenerator(String name) {
         super(name);
@@ -27,7 +27,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
     @Override
     public void load() {
         super.load();
-        topRegion = atlas.find("steam-engine-top");
+        topRegion = atlas.find("steam-engine-top.png");
     }
 
     public class SteamEngineGeneratorBuild extends SingleLiquidGeneratorBuild {
@@ -44,7 +44,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
         public void draw(){
             super.draw();
             //Drawf.liquid(liquidRegion, x, y, liquids.total() / liquidCapacity, liquids.current().color);
-            Draw.rect(topRegion, x, y, 45);
+            Draw.rect(topRegion, x, y, timeDrilled*rotateSpeed);
         }
     }
 }
