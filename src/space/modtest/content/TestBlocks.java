@@ -45,6 +45,7 @@ public class TestBlocks implements ContentList {
                 size = 3;
                 powerProduction = 10;
                 liquidCapacity = 180;
+                randomlyExplode = false;
         }};
         boiler = new GenericCrafter("boiler"){{
             health = 100;
