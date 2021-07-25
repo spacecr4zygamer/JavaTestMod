@@ -8,7 +8,9 @@ import arc.math.Mathf;
 import arc.util.Time;
 import mindustry.graphics.Drawf;
 import space.modtest.content.TestLiquids;
+import arc.Core.*;
 
+import static arc.Core.atlas;
 
 public class SteamEngineGenerator extends SingleLiquidGenerator{
 
@@ -25,7 +27,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
     @Override
     public void load() {
         super.load();
-        topRegion = Core.atlas.find("steam-engine-top");
+        topRegion = atlas.find("steam-engine-top");
     }
 
     public class SteamEngineGeneratorBuild extends SingleLiquidGeneratorBuild {
@@ -40,7 +42,7 @@ public class SteamEngineGenerator extends SingleLiquidGenerator{
 
         @Override
         public void draw(){
-            super.draw();
+
 
 
             if(hasLiquids){
