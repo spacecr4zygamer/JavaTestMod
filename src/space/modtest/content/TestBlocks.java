@@ -13,6 +13,9 @@ import mindustry.world.blocks.environment.OreBlock;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.consumers.ConsumePower;
 import mindustry.world.consumers.Consumers;
+import mindustry.world.draw.DrawAnimation;
+import mindustry.world.draw.DrawRotator;
+import mindustry.world.draw.DrawWeave;
 import mindustry.world.meta.BlockGroup;
 import mindustry.world.meta.BuildVisibility;
 import space.modtest.world.blocks.power.SingleLiquidGenerator;
@@ -67,6 +70,7 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = false;
             hasPower = false;
+            drawer = new DrawRotator();
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
