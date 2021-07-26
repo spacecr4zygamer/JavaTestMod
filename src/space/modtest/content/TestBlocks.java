@@ -76,6 +76,7 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = false;
             hasPower = false;
+            drawer = new DrawRotator();
             ambientSound = Sounds.grinding;
             ambientSoundVolume = 0.04f;
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
@@ -86,7 +87,7 @@ public class TestBlocks implements ContentList {
             ItemStack crushedsafite = new ItemStack(TestItems.crushedsafite, 1);
             outputItem = crushedsafite;
             craftEffect = Fx.cloudsmoke;
-            size = 3;
+            size = 2;
             liquidCapacity = 0;
             consumes.items(with(Items.coal, 1, TestItems.safiteore, 2));
             craftTime = 30;
