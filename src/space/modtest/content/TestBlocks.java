@@ -54,6 +54,7 @@ public class TestBlocks implements ContentList {
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
             outputsLiquid = true;
+            drawer = new DrawRotator();
             LiquidStack steam = new LiquidStack(TestLiquids.steam,90);
             outputLiquid = steam;
             craftEffect = Fx.cloudsmoke;
@@ -70,7 +71,6 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = false;
             hasPower = false;
-            drawer = new DrawRotator();
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
