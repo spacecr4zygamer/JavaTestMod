@@ -7,6 +7,7 @@ import mindustry.content.Liquids;
 import mindustry.content.TechTree;
 import mindustry.ctype.ContentList;
 import mindustry.entities.Effect;
+import mindustry.gen.Sounds;
 import mindustry.type.*;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.OreBlock;
@@ -36,6 +37,8 @@ public class TestBlocks implements ContentList {
                 minLiquidEfficiency = 0f;
                 maxLiquidGenerate = 1f;
                 health = 150;
+                ambientSound = Sounds.machine;
+                ambientSoundVolume = 0.03f;
                 requirements(Category.power,with(Items.lead,15,Items.silicon,10));
                 buildVisibility = BuildVisibility.shown;
                 group = BlockGroup.power;
@@ -58,6 +61,8 @@ public class TestBlocks implements ContentList {
             LiquidStack steam = new LiquidStack(TestLiquids.steam,90);
             outputLiquid = steam;
             craftEffect = Fx.cloudsmoke;
+            ambientSound = Sounds.combustion;
+            ambientSoundVolume = 0.04f;
             size = 2;
             liquidCapacity = 100;
             consumes.liquid(Liquids.water,0.5f);
@@ -71,6 +76,8 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = false;
             hasPower = false;
+            ambientSound = Sounds.grinding;
+            ambientSoundVolume = 0.04f;
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
@@ -91,6 +98,8 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = true;
             hasPower = true;
+            ambientSound = Sounds.splash;
+            ambientSoundVolume = 0.04f;
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
@@ -113,6 +122,8 @@ public class TestBlocks implements ContentList {
             outputsPower = false;
             consumesPower = true;
             hasPower = true;
+            ambientSound = Sounds.fire;
+            ambientSoundVolume = 0.04f;
             requirements(Category.crafting,with(Items.lead,20,Items.copper,15));
             buildVisibility = BuildVisibility.shown;
             group = BlockGroup.none;
@@ -134,6 +145,8 @@ public class TestBlocks implements ContentList {
             minLiquidEfficiency = 0f;
             maxLiquidGenerate = 0f;
             health = 50;
+            ambientSound = Sounds.fire;
+            ambientSoundVolume = 0.04f;
             requirements(Category.power,with(Items.lead,15,Items.silicon,10));
             buildVisibility = BuildVisibility.shown;
             alwaysUnlocked = true;
